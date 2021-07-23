@@ -181,8 +181,8 @@ BSP内核源码在lichee/linux-3.4下。
 由于camdriod原始的内核配置是为了在spi nor flash上运行而配置的，没有ext4支持，所以需要额外添加ext4支持：
 
 ```
-File systems  --->  
-  x				<*> The Extended 4 (ext4) filesystem
+File systems  --->
+  x                            <*> The Extended 4 (ext4) filesystem
   x x                          [*]   Use ext4 for ext2/ext3 file systems (NEW)
   x x                          [*]   Ext4 extended attributes (NEW)
   x x                          [ ]     Ext4 POSIX Access Control Lists (NEW)
@@ -230,7 +230,9 @@ timeout
 如果需要使用wifi功能，则还需要勾选RTL8723BS的支持（注意需要选择模块方式），cfg80211的支持，和AW_RF_PM选项。
 
 ```
--> Device Drivers                                           x	-> Network device support (NETDEVICES [=n])             x    	-> Wireless LAN (WLAN [=n])    
+-> Device Drivers
+x	-> Network device support (NETDEVICES [=n])
+x    	-> Wireless LAN (WLAN [=n])    
 x x 		<M>   Realtek 8723B SDIO WiFi 
 ```
 
@@ -242,14 +244,16 @@ x x 		<M>   Realtek 8723B SDIO WiFi
 ```
 
 ```
--> Device Drivers                                            x    	-> Misc devicess
+-> Device Drivers 
+x    	-> Misc devicess
 x x 		 [*] Allwinner rf module pm drivers
 ```
 
 如果需要使用GPIO,还需要勾选/sys/class/gpio/... (sysfs interface)  
 
 ```
--> Device Drivers                                           x	 -*- GPIO Support  --->                      
+-> Device Drivers 
+x	 -*- GPIO Support  --->                      
 x    	-> Wireless LAN (WLAN [=n])    
 x x 		[*]   /sys/class/gpio/... (sysfs interface)  
 ```
@@ -817,4 +821,3 @@ etc         linuxrc     mnt         root        sys         var
 # 
 
 ```
-
