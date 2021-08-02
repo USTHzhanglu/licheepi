@@ -222,6 +222,6 @@ arm-linux-gnueabihf-gcc: error: unrecognized argument in option '-march=i586'
 默认失能串口登录，需要修改 **/etc/inittab** :
 
 ```none
-tyS0::respawn:/sbin/getty -L ttyS0 115200 vt100 # GE
+ttyS0::respawn:/sbin/getty -L ttyS0 115200 vt100 # GE
 ```
 
